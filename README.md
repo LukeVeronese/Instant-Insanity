@@ -14,4 +14,11 @@ Case 1- No first thread can be found (obstacle):
 	The furthest cube that could be reached is recorded and the algorithm tries to find a first 	thread with the new smaller set of cubes.
 	An obstacle is recorded here, it can be changed if a smaller one is found later.
 Case 2 - First thread found, no second thread can be found:
-	The first thread is adjusted by going to the last cube and shifting the opposite pair to the 	right. If it is the third pair, then it       will move to the cube above it 
+	The first thread is adjusted by going to the last cube and shifting the opposite pair to the 	right. If it is the third pair, then it will move to the cube above it and shift that pair. 
+	Then the algorithm tries to find a new second thread.
+Case 3 - First and second thread found (solution):
+	If a solution for a certain number of cubes is found, then every other possible set of the 	same size is searched.
+-	If an obstacle is found, Case 1 is repeated.
+
+-	If a solution is found for every set of the same size, then the obstacle recorded from the previous larger set size is the minimal one. 
+
